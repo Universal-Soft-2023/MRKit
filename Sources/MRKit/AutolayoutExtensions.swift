@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
    
     func add(_ newView: UIView) -> UIView {
         self.addSubview(newView)
