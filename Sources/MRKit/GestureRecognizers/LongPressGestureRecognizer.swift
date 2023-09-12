@@ -41,6 +41,14 @@ extension UIView {
         self.addGestureRecognizer(longPressGestureRecognizer)
     }
     
+    public func longPressGestureRecognizer(action: (() -> Void)?) -> Self {
+        self.isUserInteractionEnabled = true
+        self.longPressGestureRecognizerAction = action
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGesture))
+        self.addGestureRecognizer(longPressGestureRecognizer)
+        return self
+    }
+    
     // Every time the user taps on the UIImageView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handleLongPressGesture(sender: UITapGestureRecognizer) {

@@ -41,6 +41,14 @@ extension UIView {
         self.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    public func tapGestureRecognizer(action: (() -> Void)?) -> Self {
+        self.isUserInteractionEnabled = true
+        self.tapGestureRecognizerAction = action
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
+        self.addGestureRecognizer(tapGestureRecognizer)
+        return self
+    }
+    
     // Every time the user taps on the UIImageView, this function gets called,
     // which triggers the closure we stored
     @objc fileprivate func handleTapGesture(sender: UITapGestureRecognizer) {
