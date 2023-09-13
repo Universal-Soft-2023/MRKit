@@ -12,12 +12,12 @@ public extension UIView {
    
     func add(_ newView: UIView) -> UIView {
         self.addSubview(newView)
-        return self
+        return newView
     }
     
     func addWithAutolayout(_ newView: UIView) -> UIView {
         newView.translatesAutoresizingMaskIntoConstraints = false
-        add(newView)
+        addSubview(newView)
         return newView
     }
     
