@@ -16,13 +16,13 @@ public extension UIView {
     }
     
     func addWithAutolayout(_ newView: UIView) -> UIView {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        newView.translatesAutoresizingMaskIntoConstraints = false
         add(newView)
         return newView
     }
     
     func forAutoLayout(_ newView: UIView) -> UIView {
-        self.translatesAutoresizingMaskIntoConstraints = false
+        newView.translatesAutoresizingMaskIntoConstraints = false
         return self
     }
 }
