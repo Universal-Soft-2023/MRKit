@@ -18,7 +18,7 @@ public extension UIView {
     func addWithAutolayout(_ newView: UIView) -> UIView {
         newView.translatesAutoresizingMaskIntoConstraints = false
         add(newView)
-        return self
+        return newView
     }
     
     func forAutoLayout() -> UIView {
