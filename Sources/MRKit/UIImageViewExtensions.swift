@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIImageView {
+public extension UIImageView {
     func image(_ val: UIImage?) -> Self {
         self.image = val
         return self

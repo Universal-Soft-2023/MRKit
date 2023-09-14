@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-extension SignedInteger {
+public extension SignedInteger {
     var cgFloat: CGFloat {
         return CGFloat(self)
     }
 }
 
-extension CGFloat {
+public extension CGFloat {
     var int: Int {
         return Int(self)
     }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     func dataSource(_ val: UITableViewDataSource) -> Self {
         self.dataSource = val
         return self
