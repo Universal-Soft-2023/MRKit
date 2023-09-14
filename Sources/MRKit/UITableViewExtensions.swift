@@ -34,6 +34,11 @@ public extension UITableView {
         return self
     }
     
+    func allowsSelection(_ val: Bool) -> Self {
+        self.allowsSelection = val
+        return self
+    }
+    
     func setup(_ closure: (Self) -> Void) -> Self {
         closure(self)
         return self
