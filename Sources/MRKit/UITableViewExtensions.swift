@@ -39,6 +39,11 @@ public extension UITableView {
         return self
     }
     
+    func separatorStyle(_ val: UITableViewCell.SeparatorStyle) -> Self {
+        self.separatorStyle = val
+        return self
+    }
+    
     func setup(_ closure: (Self) -> Void) -> Self {
         closure(self)
         return self
