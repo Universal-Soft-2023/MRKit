@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 public extension UIButton {
+    @discardableResult
     func setup(_ closure: (Self) -> Void) -> Self {
         closure(self)
         return self

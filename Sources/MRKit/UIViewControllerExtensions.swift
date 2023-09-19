@@ -33,6 +33,7 @@ public extension UIViewController {
         }
     }
     
+    @discardableResult
     func add(_ newView: UIView) -> UIView {
         if let v = self.view {
             v.addSubview(newView)
@@ -40,6 +41,7 @@ public extension UIViewController {
         return view
     }
     
+    @discardableResult
     func addWithAutolayout(_ newView: UIView) -> UIView {
         newView.translatesAutoresizingMaskIntoConstraints = false
         add(newView)
